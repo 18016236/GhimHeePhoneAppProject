@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_action_home"
+        android:enabled="true"
+        />
+    <item
+        android:id="@+id/Filter"
+        android:title="Filter"
+        android:icon="@drawable/ic_action_filter"
+        android:enabled="true"
+
+        />
+    <item
+        android:id="@+id/Shopping"
+        android:title="Shopping"
+        android:icon="@drawable/ic_action_shopping"
+        android:enabled="true"
+
+        />
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/ic_action_settings"
+        android:enabled="true"
+
+        />
+
+</menu>
