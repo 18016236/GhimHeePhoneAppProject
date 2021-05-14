@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
                         case R.id.Shopping:
                             selectedFragment = new ShoppingFragment();
                             break;
-                        case R.id.Settings:
+                        case R.id.settings:
                             selectedFragment = new SettingsFragment();
                             break;
                     }

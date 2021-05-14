@@ -52,7 +52,8 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
 
-
+    //Add Library
+    compile 'com.github.MorochoRochaDarwin:HorizontalScrollMenu:2.0.0'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
