@@ -1,14 +1,450 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".ShoppingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shopping Cart"
+            android:textSize="25dp"
+            android:layout_marginLeft="120dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="-30dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="82dp"
+                    android:layout_height="76dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/images__1_"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvBroccoliItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Thai Broccoli 2.5kg"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvOfferSpecial1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@drawable/box"
+                    android:text="Special offer"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBroccoliItem" />
+
+                <TextView
+                    android:id="@+id/tv24HrDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@drawable/box2"
+                    android:text="24hr Delivery"
+                    app:layout_constraintStart_toEndOf="@+id/tvOfferSpecial1"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBroccoliItem" />
+
+                <TextView
+                    android:id="@+id/tvCost1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="9dp"
+                    android:text="$5.50/kg"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOfferSpecial1" />
+
+                <TextView
+                    android:id="@+id/tvNumberbought"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="115dp"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginTop="5dp"
+                    android:text="888 People have bought this"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCost1" />
+
+                <Button
+                    android:id="@+id/DeleteButton"
+                    android:layout_width="54dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="242dp"
+                    android:layout_marginLeft="242dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="29dp"
+                    android:layout_marginRight="29dp"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/ic_baseline_delete_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="82dp"
+                    android:layout_height="76dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="54dp"
+                    android:src="@drawable/download"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+                <TextView
+                    android:id="@+id/tvMalaysianCabbagesItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="27dp"
+                    android:text="Malaysian Cabbages 6.5kg"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNumberbought" />
+
+
+                <TextView
+                    android:id="@+id/tvOfferSpecial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@drawable/box"
+                    android:text="Special offer"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMalaysianCabbagesItems" />
+
+
+                <TextView
+                    android:id="@+id/tv24HrDelivery2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@drawable/box2"
+                    android:text="24hr Delivery"
+                    app:layout_constraintStart_toEndOf="@+id/tvOfferSpecial"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMalaysianCabbagesItems" />
+
+
+                <TextView
+                    android:id="@+id/tvCost2ForCabbages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="9dp"
+                    android:text="$8.50/kg"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOfferSpecial" />
+
+                <TextView
+                    android:id="@+id/tvNumberbought2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="115dp"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginTop="5dp"
+                    android:text="888 People have bought this"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCost2ForCabbages" />
+
+                <Button
+                    android:id="@+id/DeleteButton2"
+                    android:layout_width="54dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="242dp"
+                    android:layout_marginLeft="242dp"
+                    android:layout_marginTop="180dp"
+                    android:layout_marginEnd="29dp"
+                    android:layout_marginRight="29dp"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/ic_baseline_delete_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/ProceedButton"
+                    android:layout_width="121dp"
+                    android:layout_height="38dp"
+                    android:layout_marginLeft="250dp"
+                    android:layout_marginTop="275dp"
+                    android:background="@color/white"
+                    android:text="Proceed"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="You might also like"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/BroccoliImage"
+                    android:layout_width="156dp"
+                    android:layout_height="155dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/images__1_"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvOptions" />
+
+                <TextView
+                    android:id="@+id/tvThaiBroccoli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/BroccoliImage"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Thai Broccoli"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/BroccoliImage" />
+
+                <TextView
+                    android:id="@+id/tvBroccoliPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="2dp"
+                    android:text="$5.50/kg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvThaiBroccoli" />
+
+                <Button
+                    android:id="@+id/BroccoliBuyButton"
+                    android:layout_width="54dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/ic_baseline_shopping_basket_242"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBroccoliPrice" />
+
+                <ImageButton
+                    android:id="@+id/CabbageImage"
+                    android:layout_width="156dp"
+                    android:layout_height="155dp"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginLeft="35dp"
+                    android:src="@drawable/download2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/BroccoliImage"
+                    app:layout_constraintTop_toTopOf="@+id/BroccoliImage" />
+
+                <TextView
+                    android:id="@+id/tvMalaysianCabbages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Malaysian Cabbages"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvThaiBroccoli"
+                    app:layout_constraintTop_toBottomOf="@+id/CabbageImage" />
+
+                <TextView
+                    android:id="@+id/tvCabbagePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="91dp"
+                    android:layout_marginLeft="91dp"
+                    android:layout_marginTop="2dp"
+                    android:text="$6.50/kg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvBroccoliPrice"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMalaysianCabbages" />
+
+                <Button
+                    android:id="@+id/cabbagesBuyButton2"
+                    android:layout_width="54dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="215dp"
+                    android:layout_marginLeft="215dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/ic_baseline_shopping_basket_242"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/BroccoliBuyButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCabbagePrice" />
+
+                <ImageView
+                    android:id="@+id/MushroomImage"
+                    android:layout_width="156dp"
+                    android:layout_height="155dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/download__1_"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/BroccoliBuyButton" />
+
+
+                <TextView
+                    android:id="@+id/tvDutchMushroom"
+                    android:layout_width="111dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Dutch Mushroom"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/MushroomImage" />
+
+                <TextView
+                    android:id="@+id/tvMushroomPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="2dp"
+                    android:text="$7.50/kg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDutchMushroom" />
+
+                <Button
+                    android:id="@+id/MushroomBuyButton"
+                    android:layout_width="54dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/ic_baseline_shopping_basket_242"
+                    app:layout_constraintEnd_toStartOf="@+id/BroccoliBuyButton"
+                    app:layout_constraintHorizontal_bias="0.11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMushroomPrice" />
+
+
+                <ImageButton
+                    android:id="@+id/BroccoliImage2"
+                    android:layout_width="156dp"
+                    android:layout_height="155dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/images__1_"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/MushroomImage"
+                    app:layout_constraintTop_toBottomOf="@+id/cabbagesBuyButton2" />
+
+                <TextView
+                    android:id="@+id/tvThaiBroccoli2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/BroccoliImage"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Thai Broccoli"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvDutchMushroom"
+                    app:layout_constraintTop_toBottomOf="@+id/BroccoliImage2" />
+
+                <TextView
+                    android:id="@+id/tvBroccoliPrice2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="91dp"
+                    android:layout_marginLeft="91dp"
+                    android:layout_marginTop="2dp"
+                    android:text="$5.50/kg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvMushroomPrice"
+                    app:layout_constraintTop_toBottomOf="@+id/tvThaiBroccoli2" />
+
+                <Button
+                    android:id="@+id/BroccoliBuyButton2"
+                    android:layout_width="54dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="170dp"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/ic_baseline_shopping_basket_242"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/MushroomBuyButton"
+                    app:layout_constraintTop_toBottomOf="@+id/tvBroccoliPrice2" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
