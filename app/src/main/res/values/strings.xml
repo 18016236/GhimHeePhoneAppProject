@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">GhimHee\'sPhoneAppProject</string>
+    <string name="tvname">Cost</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="foodoptions">
+        <item>Fresh Food</item>
+        <item>Frozen Food</item>
+        <item>Vegetables</item>
+        <item>Poultry</item>
+
+
+    </string-array>
 </resources>

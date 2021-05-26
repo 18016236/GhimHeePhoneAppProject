@@ -28,8 +28,10 @@ public class ImageGVAdapter extends ArrayAdapter<OptionsModel> {
         }
         OptionsModel optionsModel = getItem(position);
         TextView optionsTV = listitemView.findViewById(R.id.idTVCourse);
+        TextView costTV = listitemView.findViewById(R.id.idTvCost);
         ImageView optionsIV = listitemView.findViewById(R.id.idOptions);
         optionsTV.setText(optionsModel.getItem_name());
+        costTV.setText(optionsModel.getItem_cost());
         optionsIV.setImageResource(optionsModel.getImgid());
         return listitemView;
 

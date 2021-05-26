@@ -1,11 +1,12 @@
 package com.example.ghimheesphoneappproject;
 
 public class OptionsModel {
-    private String item_name;
+    private String item_name,item_cost;
     private int imgid;
 
-    public OptionsModel(String item_name, int imgid) {
+    public OptionsModel(String item_name, String item_cost, int imgid) {
         this.item_name = item_name;
+        this.item_cost = item_cost;
         this.imgid = imgid;
     }
 
@@ -15,6 +16,14 @@ public class OptionsModel {
 
     public void setItem_name(String item_name) {
         this.item_name = item_name;
+    }
+
+    public String getItem_cost() {
+        return item_cost;
+    }
+
+    public void setItem_cost(String item_cost) {
+        this.item_cost = item_cost;
     }
 
     public int getImgid() {

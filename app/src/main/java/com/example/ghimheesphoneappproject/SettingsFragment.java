@@ -16,7 +16,6 @@ public class SettingsFragment extends Fragment {
     GridView simpleGrid;
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -25,10 +24,10 @@ public class SettingsFragment extends Fragment {
         simpleGrid = view.findViewById(R.id.GvRecommendations);
 
         ArrayList<OptionsModel>optionsModelArrayList = new ArrayList<OptionsModel>();
-        optionsModelArrayList.add(new OptionsModel("Malaysian Cabbages",R.drawable.download));
-        optionsModelArrayList.add(new OptionsModel("Dutch Mushrooms",R.drawable.download__1_));
-        optionsModelArrayList.add(new OptionsModel("Thai Broccoli",R.drawable.images));
-        optionsModelArrayList.add(new OptionsModel("Phillipines Cabbages",R.drawable.download2));
+        optionsModelArrayList.add(new OptionsModel("Malaysian Cabbages","$5.50/kg",R.drawable.download));
+        optionsModelArrayList.add(new OptionsModel("Dutch Mushrooms","$8.50/kg",R.drawable.download__1_));
+        optionsModelArrayList.add(new OptionsModel("Thai Broccoli","$4.00/kg",R.drawable.images));
+        optionsModelArrayList.add(new OptionsModel("Phillipines Cabbages","$9.99/kg",R.drawable.download2));
 
         ImageGVAdapter adapter = new ImageGVAdapter(this.getActivity(),optionsModelArrayList);
         simpleGrid.setAdapter(adapter);
